@@ -1,8 +1,11 @@
 # esbuild-plugin-rewrite-relative-import-extensions
 
-This plugin rewrites `.jsx`, `.ts` and `.tsx` imports to `.js` for transform mode (bundle: false). Please see https://github.com/evanw/esbuild/issues/2435.
+This plugin rewrites `.jsx`, `.ts` and `.tsx` imports to `.js` for transform
+mode (bundle: false). Please see https://github.com/evanw/esbuild/issues/2435.
 
-It rewrites paths the same way [__rewriteRelativeImportExtension](https://github.com/microsoft/TypeScript/blob/main/src/compiler/factory/emitHelpers.ts#L1456) from Typescript does!
+It rewrites paths the same way
+[__rewriteRelativeImportExtension](https://github.com/microsoft/TypeScript/blob/main/src/compiler/factory/emitHelpers.ts#L1456)
+from Typescript does!
 
 ## Install
 
