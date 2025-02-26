@@ -10,12 +10,10 @@ export function rewriteRelativeImportExtension(
     /\.([jt]sx)$|((?:\.d)?)((?:\.[^./]+?)?)\.([cm]?)ts$/i,
     function (m, tsx, d, ext, cm) {
       return tsx
-        ? preserveJsx
-          ? '.jsx'
-          : '.js'
+        ? preserveJsx ? ".jsx" : ".js"
         : d && (!ext || !cm)
         ? m
-        : d + ext + '.' + cm.toLowerCase() + 'js';
+        : d + ext + "." + cm.toLowerCase() + "js";
     },
   );
 }

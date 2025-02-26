@@ -1,9 +1,9 @@
-import fs from 'node:fs';
-import path from 'node:path';
-import type { PluginBuild, Plugin } from 'esbuild';
-import { rewriteRelativeImportExtension } from './rewriteRelativeImportExtension.ts';
+import fs from "node:fs";
+import path from "node:path";
+import type { Plugin, PluginBuild } from "esbuild";
+import { rewriteRelativeImportExtension } from "./rewriteRelativeImportExtension.ts";
 
-interface RewriteRelativeImportPluginExtensionsOptions {
+export interface RewriteRelativeImportPluginExtensionsOptions {
   /** If set to `true` paths ending with `.tsx` and `.jsx` will be `.jsx` instead. */
   preserveJsx?: boolean;
 }
@@ -13,7 +13,7 @@ export function rewriteRelativeImportExtensionsPlugin(
   options: RewriteRelativeImportPluginExtensionsOptions = {},
 ): Plugin {
   return {
-    name: 'rewrite-relative-import-extensions',
+    name: "rewrite-relative-import-extensions",
     setup(build: PluginBuild) {
       const write = build.initialOptions.write;
       build.initialOptions.write = false;
