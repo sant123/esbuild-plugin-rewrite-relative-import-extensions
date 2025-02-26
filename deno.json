@@ -1,0 +1,10 @@
+{
+  "lock": false,
+  "name": "@onyx/esbuild-plugin-rewrite-relative-import-extensions",
+  "version": "0.0.1",
+  "exports": "./rewriteRelativeImportExtensionsPlugin.ts",
+  "license": "MIT",
+  "imports": {
+    "esbuild": "npm:esbuild@^0.25.0"
+  }
+}
